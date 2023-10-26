@@ -32,40 +32,41 @@ main {
   color: #6a889c;
   position: relative;
 }
-i:nth-child(1) {
+.parole > i{
   opacity: 1;
   display: inline-block;
-  animation: change 2.2s backwards;
+  animation: change 6s linear infinite backwards;
   position: absolute;
   left: 10px;
   width: 200px;
 }
 i:nth-child(2) {
-  opacity: 0;
-  display: inline-block;
-  animation: change 2s 600ms;
-  position: absolute;
-  left: 10px;
-  width: 200px;
+  animation-delay: 2s;
 }
 i:nth-child(3) {
-    opacity: 0;
-    display: inline-block;
-    animation: change 2s 1s;
-    position: absolute;
-    left: 10px;
-    width: 200px;
+    animation-delay: 4s;
 }
+
+
 
 @keyframes change {
     from {
         transform: translateY(-200px);
+        opacity: 0;
+    }
+    20% {
         opacity: 1;
     }
-    50% {
+    
+    50%{
         transform: translateY(0px);
         opacity: 1;
     }
+    70% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
     to {
         transform: translateY(100px);
         opacity: 0;
